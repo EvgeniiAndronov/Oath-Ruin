@@ -1,0 +1,48 @@
+# Godot 4.x + Go Server .gitignore
+
+# Godot 4
+.godot/
+*.godot
+export.cfg
+export_presets.cfg
+*.import
+*.tmp
+
+# Godot Mono (если не используется C#)
+# .mono/
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+vendor/
+go.sum
+
+# Общие
+.DS_Store
+Thumbs.db
+*.log
+*.swp
+*.swo
+*~
+
+# IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.iml
+
+# Временные файлы
+tmp/
+temp/
+.cache/
+
+# Сборки
+builds/
+exports/
+releases/

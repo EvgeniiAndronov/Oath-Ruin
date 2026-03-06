@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://battle_scene"]
+
+[ext_resource type="Script" path="res://scripts/systems/grid.gd" id="1_grid"]
+[ext_resource type="Script" path="res://scripts/systems/combat.gd" id="2_combat"]
+[ext_resource type="Script" path="res://scripts/components/character.gd" id="3_character"]
+
+[node name="BattleScene" type="Node2D"]
+
+[node name="BattleGrid" type="Node2D" parent="."]
+script = ExtResource("1_grid")
+tile_size = 64
+grid_width = 16
+grid_height = 16
+
+[node name="CombatSystem" type="Node" parent="."]
+script = ExtResource("2_combat")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(512, 512)
+zoom = Vector2(1, 1)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="TurnIndicator" type="Label" parent="UI"]
+offset_left = 1650.0
+offset_top = 20.0
+offset_right = 1880.0
+offset_bottom = 60.0
+text="Ход игрока"
+horizontal_alignment="center"
+
+[node name="Character1" type="CharacterBody2D" parent="." groups=["characters"]]
+name = "Character1"
+script = ExtResource("3_character")
+
+[node name="Sprite" type="ColorRect" parent="Character1"]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+color = Color(0, 0.5, 1, 1)
+
+[node name="Character2" type="CharacterBody2D" parent="." groups=["characters"]]
+name = "Character2"
+script = ExtResource("3_character")
+
+[node name="Sprite" type="ColorRect" parent="Character2"]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+color = Color(1, 0.3, 0, 1)
