@@ -12,7 +12,7 @@ tile_size = 64
 grid_width = 16
 grid_height = 16
 
-[node name="CombatSystem" type="Node" parent="."]
+[node name="CombatSystem" type="Node2D" parent="."]
 script = ExtResource("2_combat")
 grid = NodePath("../BattleGrid")
 
