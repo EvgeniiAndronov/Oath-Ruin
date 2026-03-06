@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://scripts/ui/main_menu.gd" id="1_main"]
 
 [node name="MainMenu" type="Control"]
+script = ExtResource("1_main")
 layout_mode="control"
 anchors_preset="full_rect"
 

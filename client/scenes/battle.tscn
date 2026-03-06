@@ -14,6 +14,7 @@ grid_height = 16
 
 [node name="CombatSystem" type="Node" parent="."]
 script = ExtResource("2_combat")
+grid = NodePath("../BattleGrid")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(512, 512)
@@ -30,8 +31,12 @@ text="Ход игрока"
 horizontal_alignment="center"
 
 [node name="Character1" type="CharacterBody2D" parent="." groups=["characters"]]
-name = "Character1"
 script = ExtResource("3_character")
+grid = NodePath("../BattleGrid")
+position = Vector2(96, 96)
+character_id = "char_1"
+character_name = "Warrior"
+character_class = "warrior"
 
 [node name="Sprite" type="ColorRect" parent="Character1"]
 offset_left = -16.0
@@ -41,8 +46,12 @@ offset_bottom = 16.0
 color = Color(0, 0.5, 1, 1)
 
 [node name="Character2" type="CharacterBody2D" parent="." groups=["characters"]]
-name = "Character2"
 script = ExtResource("3_character")
+grid = NodePath("../BattleGrid")
+position = Vector2(224, 96)
+character_id = "char_2"
+character_name = "Mage"
+character_class = "mage"
 
 [node name="Sprite" type="ColorRect" parent="Character2"]
 offset_left = -16.0
