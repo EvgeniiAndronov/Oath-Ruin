@@ -18,7 +18,7 @@ func _ready():
 	if grid == null:
 		grid = get_node_or_null("/root/BattleScene/BattleGrid")
 
-func get_available_tiles() -> Array[Vector2i]:
+func get_available_tiles() -> Array:
 	if grid == null:
 		return []
 	
